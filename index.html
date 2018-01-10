@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>  
+<meta charset="utf-8">
+    <title>越便利，悦生活：揭秘便利店人见人爱的原因？</title>
+    <!-- 引入 echarts.js -->
+    <script src="js/echarts.min.js"></script>
+    
+    <script src="js/echarts.js"></script>
+    <!-- 引入 vintage 主题 -->
+    <script src="js/westeros.js"></script>
+    
+    <link href="css/creative.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+
+<body>
+    <!-- 以下是侧边栏！-->   
+    <div class='card-holder'>
+        <div class='card-wrapper'>
+          <a class="js-scroll-trigger" href='index.html'>
+            <div class='card bg-01'>
+              <span class='card-content'>首页</span>
+            </div>
+          </a>
+        </div>
+        <div class='card-wrapper'>
+          <a class="js-scroll-trigger" href='#history'>
+            <div class='card bg-02'>
+              <span class='card-content'>便利店的起源与发展</span>
+            </div>
+          </a>
+        </div>
+        <div class='card-wrapper'>
+          <a class="js-scroll-trigger" href='#nowadays'>
+            <div class='card bg-03'>
+              <span class='card-content'>便利店在中国</span>
+            </div>
+          </a>
+        </div>
+        <div class='card-wrapper'>
+          <a class="js-scroll-trigger" href='#why'>
+            <div class='card bg-04'>
+              <span class='card-content'>为什么便利店人见人爱？</span>
+            </div>
+          </a>
+        </div>
+        <div class='card-wrapper'>
+          <a class="js-scroll-trigger" href='#future'>
+            <div class='card bg-05'>
+              <span class='card-content'>从便利店到便利文化</span>
+            </div>
+          </a>
+        </div>
+        <div class='card-wrapper'>
+          <a class="js-scroll-trigger" href='#end'>
+            <div class='card bg-06'>
+              <span class='card-content'>尾声</span>
+            </div>
+          </a>
+        </div>
+      </div>
+ <!-- 侧边栏结束-->
+ <!-- 以下是背景封面-->
+
+ <header class="masthead">
+        <div class="container my-auto">
+            <div class="row">
+            </div>
+        </div>
+        <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+            <tr>
+                <td align="center" valign="middle">
+                    <a class=" d2 btn1 btn-light btn-xl sr-button js-scroll-trigger" href="#yinyan"><span style="font-family: 微软雅黑;">了解更多</span></a>
+                </td>
+            </tr>
+        </table>
+
+        <style>.d2{
+
+                width:80px;
+                height:20px;
+                background:#e65c01;
+                position:relative;	
+                left:0px;
+                top:260px;/*设置相对定位*/}
+       </style>
+ </header>
+ <p>&nbsp;</p>
+ <div id="yinyan">
+ <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+        <tr>
+                <td align="center" valign="middle">
+                    <img src="img/yinyan.png" width="1080"></td>
+        </tr>
+    </table>
+    <p>&nbsp;</p>
+ <div id="banner">
+        <div class="bgimage"></div>
+        <div class="bg-targets">
+            <a href="#history" class="t1 js-scroll-trigger"></a>
+            <a href="#nowadays" class="t2 js-scroll-trigger"></a>
+            <a href="#why" class="t3 js-scroll-trigger"></a>
+            <a href="#future" class="t4 js-scroll-trigger"></a>
+        </div>
+    </div>
+ 
+ <!-- 背景封面结束-->
+
+ <!--插入一张图的table
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" >   
+    <tr>
+            <td align="center" valign="middle"><img src="img/1.jpg" width="1080" height="480"></td>
+          <!这里的1080X480刚刚好-->
+    <!--/tr>
+     <!/table> 
+    <!插入结束-->
+   
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+   <!--以下是Tableau图表；注意<p>中间那一串是html锚点定义超链接；给个教程：https://www.cnblogs.com/tommy-huang/p/4468574.html-->
+        <hr></hr>
+        <p>&nbsp;</p>
+    <p id="history"> </p> 
+   <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+    <tr>
+            <td align="center" valign="middle">
+                <img src="img/letter1.png" width="1080"></td>
+    </tr>
+</table>
+<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+        <tr>
+                <td align="center" valign="middle">
+                    <img src="img/2.png" width="1080"></td>
+        </tr>
+    </table>
+
+
+<p>&nbsp;</p>
+<hr></hr>
+<p>&nbsp;</p>
+<p id="nowadays"> </p> 
+<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+        <tr>
+                <td align="center" valign="middle">
+                    <img src="img/letter2.png" width="1080"></td>
+        </tr>
+    </table>
+    <p>&nbsp;</p>
+    <table width="50%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center" valign="middle">
+    
+        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+        <div id="main1" style="width:1080px;height:480px;"></div>
+        <script type="text/javascript">
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main1'),'westeros');
+    
+    // 指定图表的配置项和数据
+    var option = option = {
+        title: {
+            text: '近年来零售业业态增速对比图'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['便利店行业','超市','百货',]
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['2010','2011','2012','2013','2014','2015','2016']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name:'便利店行业',
+                type:'line',
+                stack: '',
+                data:[14.7, 15.7, 12.5, 10, 10.3, 12.5, 11]
+            },
+            {
+                name:'超市',
+                type:'line',
+                stack: '',
+                data:[12, 11, 10.1, 7.5, 6, 5.7, 5.3]
+            },
+            {
+                name:'百货',
+                type:'line',
+                stack: '',
+                data:[17.5, 15.7, 9, 6, 1, -0.3, -1]
+            },
+           
+        ]
+    };
+    
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+                </td>
+            </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+                <tr>
+                        <td align="center" valign="middle">
+                            <img src="img/2-1.png" width="1080"></td>
+                </tr>
+            </table>
+        <p>&nbsp;</p>
+        <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+                <tr>
+                        <td align="center" valign="middle">
+                            <img src="img/letter3.png" width="1080"></td>
+                </tr>
+            </table>
+            <p>&nbsp;</p>
+            <table width="50%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td width="100" align="center">
+                            <div id="main3" style="width: 500px;height:300px;"></div>
+                            <script type="text/javascript">
+                                var myChart = echarts.init(document.getElementById('main3'),'westeros');
+                                option = {
+                                    title: {
+                                        text: '中国十大便利店品牌',
+                                        subtext: '数据源：CCFA'
+                                    },
+            
+                                    tooltip: {
+                                        trigger: 'item',
+                                        formatter: "{a} <br/>{b}: {c} ({d}%)"
+                                    },
+                                    legend: {
+                                        orient: 'vertical',
+                                        x: 'right',
+                                        data: ['7-Eleven', '全家FamilyMart','快客便利店','天福', '好德-可的Kedi', '上好便利店', '喜士多C-store','红旗连锁','美宜佳MEIYIJIA','LAWSON罗森']
+                                    },
+                                    series: [{
+                                        name: '排名不分先后',
+                                        type: 'pie',
+                                        radius: ['50%', '70%'],
+                                        avoidLabelOverlap: false,
+                                        label: {
+                                            normal: {
+                                                show: false,
+                                                position: 'center'
+                                            },
+                                            emphasis: {
+                                                show: true,
+                                                textStyle: {
+                                                    fontSize: '20',
+                                                    fontWeight: 'bold'
+                                                }
+                                            }
+                                        },
+                                        labelLine: {
+                                            normal: {
+                                                show: false
+                                            }
+                                        },
+                                        data: [{
+                                            value: 10,
+                                            name: '7-Eleven'
+                                        }, {
+                                            value: 10,
+                                            name: '全家FamilyMart'
+                                        }, {
+                                            value: 10,
+                                            name: '快客便利店'
+                                        }, {
+                                            value: 10,
+                                            name: '天福'
+                                        }, {
+                                            value: 10,
+                                            name: '好德-可的kedi'
+                                        }, {
+                                            value: 10,
+                                            name: '上好便利店'
+                                        }, {
+                                            value: 10,
+                                            name: '喜士多C-store'
+                                        }, {
+                                            value: 10,
+                                            name: '红旗连锁'
+                                        }, {
+                                            value: 10,
+                                            name: '美宜佳MEIYIJIA'
+                                        }, {
+                                            value: 10,
+                                            name: 'LAWSON罗森'
+                                        }]
+                                    }]
+                                };
+                                myChart.setOption(option);
+                            </script>
+                        </td>
+                          <!-- 下面的main3每一个最好不要重复！还有注意主题是怎么修改的-->
+                    </tr>
+                </table>
+                <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+                        <tr>
+                                <td align="center" valign="middle">
+                                    <img src="img/letter4.png" width="1080"></td>
+                        </tr>
+                    </table>
+                
+   <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center" valign="middle">
+    <div style="width:100%;height:480px;overflow:hidden"><span style="font-family: 微软雅黑;"></span>
+        <div class='tableauPlaceholder' id='viz1514973669210' style='position: relative'><noscript><a href='#'><img alt='仪表板 5 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;20&#47;2016_278&#47;5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='2016_278&#47;5' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;20&#47;2016_278&#47;5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                
+        <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1514973669210');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        vizElement.style.width='100%';vizElement.style.maxWidth='1080px';
+        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        vizElement.style.maxHeight='507px';                    
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                   
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+
+    </div>
+</td>
+</tr>
+</table>
+<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+        <tr>
+                <td align="center" valign="middle">
+                    <img src="img/letter5.png" width="1080"></td>
+        </tr>
+    </table>
+   
+    <p id="why"> </p> 
+    <hr></hr>
+    <p>&nbsp;</p>
+    <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+            <tr>
+                    <td align="center" valign="middle">
+                        <img src="img/letter6.png" width="1080"></td>
+            </tr>
+        </table>
+
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center" valign="middle">
+
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main2" style="width:1080px;height:480px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main2'),'westeros');
+
+// 指定图表的配置项和数据
+var option = {title:{text: '人们为什么会选择便利店的前十大原因',
+                    subtext: '数据源：便利店业态发展研究，德勤研究',
+                    left: 'center'},
+
+    color: [],
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '3%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: [{
+        type: 'category',
+        data: ['距离近', '营业时间长', '去习惯了', '店内卫生', '商品丰富', '食品安全', '东西好吃', '有新商品', '可当场食用', '店员服务好'],
+        axisTick: {
+            alignWithLabel: true
+        
+        }
+    }],
+    yAxis: [{
+        name: '百分比',
+        type: 'value'
+    }],
+    series: [{
+        name: '百分比',
+        type: 'bar',
+        barWidth: '60%',
+        data: [80, 59, 38, 27, 26, 23, 21, 16, 17, 13]
+    }]
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+            </td>
+        </tr>
+    </table>
+    <p>&nbsp;</p>
+    <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+            <tr>
+                    <td align="center" valign="middle">
+                        <img src="img/9.png" width="1080"></td>
+            </tr>
+        </table>
+        <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+                <tr>
+                        <td align="center" valign="middle">
+                            <img src="img/10.png" width="1080"></td>
+                </tr>
+            </table>
+            <p>&nbsp;</p>
+            <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+                    <tr>
+                            <td align="center" valign="middle">
+                                <img src="img/letter7.png" width="1080"></td>
+                    </tr>
+                </table>
+                <p>&nbsp;</p>
+                <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+                        <tr>
+                                <td align="center" valign="middle">
+                                    <img src="img/11.jpeg" width="1080"></td>
+                        </tr>
+                    </table>
+                    <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+                            <tr>
+                                    <td align="center" valign="middle">
+                                        <img src="img/12.png" width="1080"></td>
+                            </tr>
+                        </table>
+                        <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+                                <tr>
+                                        <td align="center" valign="middle">
+                                            <img src="img/letter8.png" width="1080"></td>
+                                </tr>
+                            </table>
+                            <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+                                    <tr>
+                                            <td align="center" valign="middle">
+                                                <img src="img/13.png" width="1080"></td>
+                                    </tr>
+                                </table>
+                                <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+                                        <tr>
+                                                <td align="center" valign="middle">
+                                                    <img src="img/letter9.png" width="1080"></td>
+                                        </tr>
+                                    </table>
+                                    <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+                                            <tr>
+                                                    <td align="center" valign="middle">
+                                                        <img src="img/14.jpg" width="1080"></td>
+                                            </tr>
+                                        </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p id="future"> </p> 
+    <hr></hr>
+
+ <p>&nbsp;</p>
+ <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" >
+        <tr>
+                <td align="center" valign="middle">
+                    <img src="img/letter10.png" width="1080"></td>
+        </tr>
+    </table>
+ <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <!-- width的百分比可以修改分割线的长度。align是让东西居中-->
+<tr>
+        
+<td align="center" valign="middle"> 
+<embed src="img/1.swf"width="1080"height=680></embed>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" >
+    <tr>
+            <td align="center" valign="middle">
+                <img src="img/zhushi1.png" width="1080"></td>
+    </tr>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" >
+        <tr>
+                <td align="center" valign="middle">
+                    <img src="img/15.png" width="1080"></td>
+        </tr>
+    </table>
+</td>
+</tr>
+</table>
+
+ <p id="end"> </p> 
+ <table width="80%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <!-- width的百分比可以修改分割线的长度。align是让东西居中-->
+  <tr>
+ <td align="center" valign="middle"> 
+    <hr>
+    <p>&nbsp;</p> 
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" >
+            <tr>
+                    <td align="center" valign="middle">
+                        <img src="img/letter-end.png" width="1080"></td>
+            </tr>
+        </table>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" >
+            <tr>
+                    <td align="center" valign="middle">
+                        <img src="img/2.gif" width="1080"></td>
+            </tr>
+        </table>
+        <p>&nbsp;</p> 
+        <hr>
+        <p>&nbsp;</p> 
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" >
+                <tr>
+                        <td align="center" valign="middle">
+                            <img src="img/fulu-end.png" width="1080"></td>
+                </tr>
+            </table>
+            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <!-- width的百分比可以修改分割线的长度。align是让东西居中-->
+              <tr>
+             <td align="center" valign="middle"> 
+                    <section class="text-faded">
+                            <div class="container text-center">
+                                   <a class="btn1 btn-light btn-xl sr-button js-scroll-trigger" href="index.html"><span style="font-family: 微软雅黑;">回到顶部</a>
+                            </div>
+                        </section>
+            </td>
+                </tr>
+            </table>
+</div>
+</td>
+    </tr>
+</table>
+
+
+
+<script src="vendor/jquery/jquery.min.js "></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+<script src="bootstrap/js/bootstrap.min.js "></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js "></script>
+<script src="vendor/scrollreveal/scrollreveal.min.js "></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js "></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/creative.min.js "></script>
+
+   
+</body>
+</html>
