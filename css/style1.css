@@ -1,0 +1,110 @@
+#tail, .masthead .navs .nav-item {
+  position: absolute;
+  color: white;
+  background-color: #f57a46;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 4px 24px;
+  display: inline-block;
+  user-select: none;
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 30px;
+}
+
+#tail:hover, .masthead .navs .nav-item:hover{
+  background-color: rgb(13, 115, 55);
+}
+
+.masthead .navs .nav-item {
+  top: 100px;
+}
+
+#nav1 {
+  left: 30px;
+  padding: 4px 8px;
+}
+
+#nav2 {
+  left: 240px;
+}
+
+#nav3 {
+  padding: 4px 8px;
+  right: 190px;
+  font-size: 16px;
+}
+
+#nav4 {
+  padding: 4px 8px;
+  font-size: 16px;
+  right: 20px;
+}
+
+#tail {
+  bottom: 30px;
+  right: 20px;
+  padding: 4px 12px;
+  font-size: 20px;
+}
+
+#main .content-nav {
+  user-select: none;
+  width: 86%;
+  padding: 0px 7%;
+  min-width: 1080px;
+  position: fixed;
+  top: 0px;
+  background-color: white;
+  z-index: 100;
+}
+
+#main .content {
+  padding-top: 80px;
+}
+
+#index {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#index .icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  vertical-align: top;
+}
+
+#index .text {
+  font-size: 24px;
+  line-height: 70px;
+  padding-right: 10px;
+}
+
+.content-nav {
+  padding-top: 10px;
+}
+
+.content-nav .nav-item {
+  float: right;
+  color: white;
+  background-color: #f57a46;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 4px 8px;
+  user-select: none;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-right: 20px;
+  margin-top: 18px;
+}
+
+.content-nav .nav-item:hover,
+.content-nav .nav-item--active {
+  background-color: rgb(13, 115, 55);
+}
+
+.content-nav #main-nav4 {
+  margin-right: 10px;
+}
