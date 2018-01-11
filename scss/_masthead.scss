@@ -1,5 +1,5 @@
 // Styling for the masthead
-header.masthead {
+.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
   background-image: url('../img/header.jpg');
@@ -14,6 +14,15 @@ header.masthead {
   }
   p {
     font-weight: 300;
+  }
+  .d2 {
+    width:80px;
+    height:20px;
+    background:#e65c01;
+    position:relative;	
+    left:0px;
+    top:260px;
+    /*设置相对定位*/
   }
   @media (min-width: 768px) {
     p {
